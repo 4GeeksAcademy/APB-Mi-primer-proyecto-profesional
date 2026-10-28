@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de referencia | Tienda de ropa</title>
+    <meta name="description" content="Referencia de la cabecera y el pie comunes del prototipo de tienda de ropa, con el contenido principal pendiente de cada vista.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap">
+    <style type="text/tailwindcss">
+      @theme {
+        --color-brand-pine: #17483F;
+        --color-brand-coral: #B64D3C;
+        --color-brand-ochre: #D7A13B;
+        --color-page: #F7F8F4;
+        --color-surface: #FFFFFF;
+        --color-surface-subtle: #EDF2EE;
+        --color-text-primary: #202522;
+        --color-text-secondary: #66716B;
+        --color-border: #D7DED8;
+        --color-disabled-text: #646D67;
+        --font-sans: "DM Sans", "Helvetica Neue", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="flex min-h-dvh flex-col bg-page font-sans text-base leading-normal text-text-primary">
+    <a href="#contenido" class="sr-only z-10 rounded-sm bg-surface px-4 py-3 text-brand-pine underline focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Saltar al contenido</a>
+
+    <header class="border-b border-border bg-surface">
+      <div class="mx-auto flex min-h-16 w-full max-w-7xl flex-wrap items-center gap-x-8 gap-y-4 px-4 py-4 md:min-h-18 md:px-6 xl:px-8">
+        <span class="min-w-0 text-xl font-semibold break-words">Marca pendiente</span>
+
+        <nav aria-label="Navegación principal" class="min-w-0 md:ml-auto">
+          <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-text-secondary">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Inicio<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Catálogo<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Carrito<span class="sr-only"> (destino pendiente)</span></span></li>
+          </ul>
+        </nav>
+
+        <div class="flex w-full min-w-0 flex-wrap items-start gap-4 lg:w-auto lg:flex-1">
+          <div class="min-w-0 flex-1 basis-48">
+            <label for="busqueda" class="mb-1 block text-sm font-medium">Buscar productos</label>
+            <input id="busqueda" type="search" placeholder="Búsqueda de demostración" disabled aria-describedby="busqueda-estado" class="min-h-12 w-full min-w-0 cursor-not-allowed rounded-sm border border-border bg-surface-subtle px-3 text-base text-disabled-text placeholder:text-disabled-text">
+            <p id="busqueda-estado" class="mt-1 text-xs text-text-secondary">No disponible en este prototipo.</p>
+          </div>
+
+          <details class="min-w-0 max-w-full basis-40 pt-6 text-sm">
+            <summary class="min-h-11 cursor-pointer rounded-sm px-2 py-3 font-medium text-brand-pine hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Cuenta</summary>
+            <p class="max-w-56 px-2 py-3 text-text-secondary">Demostración. El acceso a cuenta no está disponible.</p>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido" tabindex="-1" class="mx-auto min-h-24 w-full max-w-7xl flex-1 px-4 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-coral md:px-6 xl:px-8"></main>
+
+    <footer class="bg-brand-pine text-white">
+      <div class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 md:grid-cols-3 md:px-6 md:py-16 xl:px-8">
+        <section aria-labelledby="categorias-titulo" class="min-w-0">
+          <h2 id="categorias-titulo" class="mb-4 text-sm font-semibold">Categorías</h2>
+          <ul class="text-sm">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Calzado<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Camisas<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Pantalones<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Accesorios<span class="sr-only"> (destino pendiente)</span></span></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="legal-titulo" class="min-w-0">
+          <h2 id="legal-titulo" class="mb-4 text-sm font-semibold">Legal</h2>
+          <ul class="text-sm">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Términos y condiciones<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Política de privacidad<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Sobre la marca<span class="sr-only"> (destino pendiente)</span></span></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="contacto-titulo" class="min-w-0">
+          <h2 id="contacto-titulo" class="mb-4 text-sm font-semibold">Contacto</h2>
+          <p class="text-sm leading-relaxed">Información de contacto pendiente.</p>
+          <p class="mt-4 text-sm leading-relaxed">Destinos de navegación pendientes de confirmar.</p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

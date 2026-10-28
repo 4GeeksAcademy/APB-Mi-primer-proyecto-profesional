@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de ropa | Tienda de ropa</title>
+    <meta name="description" content="Explora prendas y accesorios de demostración en el catálogo de la tienda.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap">
+    <style type="text/tailwindcss">
+      @theme {
+        --color-brand-pine: #17483F;
+        --color-brand-coral: #B64D3C;
+        --color-brand-ochre: #D7A13B;
+        --color-page: #F7F8F4;
+        --color-surface: #FFFFFF;
+        --color-surface-subtle: #EDF2EE;
+        --color-text-primary: #202522;
+        --color-text-secondary: #66716B;
+        --color-border: #D7DED8;
+        --color-disabled-text: #646D67;
+        --font-sans: "DM Sans", "Helvetica Neue", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="flex min-h-dvh flex-col bg-page font-sans text-base leading-normal text-text-primary">
+    <a href="#contenido" class="sr-only z-10 rounded-sm bg-surface px-4 py-3 text-brand-pine underline focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Saltar al contenido</a>
+
+    <header class="border-b border-border bg-surface">
+      <div class="mx-auto flex min-h-16 w-full max-w-7xl flex-wrap items-center gap-x-8 gap-y-4 px-4 py-4 md:min-h-18 md:px-6 xl:px-8">
+        <span class="min-w-0 text-xl font-semibold break-words">Marca pendiente</span>
+
+        <nav aria-label="Navegación principal" class="min-w-0 md:ml-auto">
+          <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-text-secondary">
+            <li><a href="index.html" class="inline-flex min-h-11 items-center underline-offset-4 hover:text-brand-pine hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Inicio</a></li>
+            <li><a href="catalogo.html" aria-current="page" class="inline-flex min-h-11 items-center text-brand-pine underline decoration-2 underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Catálogo</a></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Carrito<span class="sr-only"> (destino pendiente)</span></span></li>
+          </ul>
+        </nav>
+
+        <div class="flex w-full min-w-0 flex-wrap items-start gap-4 lg:w-auto lg:flex-1">
+          <div class="min-w-0 flex-1 basis-48">
+            <label for="busqueda" class="mb-1 block text-sm font-medium">Buscar productos</label>
+            <input id="busqueda" type="search" placeholder="Búsqueda de demostración" disabled aria-describedby="busqueda-estado" class="min-h-12 w-full min-w-0 cursor-not-allowed rounded-sm border border-border bg-surface-subtle px-3 text-base text-disabled-text placeholder:text-disabled-text">
+            <p id="busqueda-estado" class="mt-1 text-xs text-text-secondary">No disponible en este prototipo.</p>
+          </div>
+
+          <details class="min-w-0 max-w-full basis-40 pt-6 text-sm">
+            <summary class="min-h-11 cursor-pointer rounded-sm px-2 py-3 font-medium text-brand-pine hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Cuenta</summary>
+            <p class="max-w-56 px-2 py-3 text-text-secondary">Demostración. El acceso a cuenta no está disponible.</p>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido" tabindex="-1" class="mx-auto w-full max-w-7xl flex-1 px-4 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-coral md:px-6 xl:px-8">
+      <section aria-labelledby="catalogo-titulo" class="py-12 md:py-16">
+        <p class="mb-3 text-sm font-medium text-text-secondary">Tienda de ropa · catálogo</p>
+        <h1 id="catalogo-titulo" class="text-4xl font-semibold leading-tight md:text-5xl">Prendas para cada día</h1>
+        <p class="mt-4 max-w-2xl text-base leading-relaxed text-text-secondary">Explora una selección de calzado, camisas, pantalones y accesorios. Los artículos y sus precios son ejemplos para este prototipo.</p>
+      </section>
+
+      <section aria-labelledby="filtros-titulo" class="mb-10 border-y border-border py-6">
+        <h2 id="filtros-titulo" class="mb-4 text-lg font-semibold">Filtrar artículos</h2>
+        <div class="grid min-w-0 gap-4 md:grid-cols-2">
+          <div class="min-w-0">
+            <label for="filtro-categoria" class="mb-1 block text-sm font-medium">Categoría</label>
+            <select id="filtro-categoria" disabled aria-describedby="filtros-estado" class="min-h-12 w-full rounded-sm border border-border bg-surface-subtle px-3 text-base text-disabled-text">
+              <option>Todas las categorías</option>
+              <option>Calzado</option>
+              <option>Camisas</option>
+              <option>Pantalones</option>
+              <option>Accesorios</option>
+            </select>
+          </div>
+          <div class="min-w-0">
+            <label for="filtro-talla" class="mb-1 block text-sm font-medium">Talla</label>
+            <select id="filtro-talla" disabled aria-describedby="filtros-estado" class="min-h-12 w-full rounded-sm border border-border bg-surface-subtle px-3 text-base text-disabled-text">
+              <option>Todas las tallas</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>Única</option>
+            </select>
+          </div>
+        </div>
+        <p id="filtros-estado" class="mt-3 text-sm text-text-secondary">Filtros visuales de demostración; no aplican cambios.</p>
+      </section>
+
+      <section id="catalogo-lista" itemscope itemtype="https://schema.org/OfferCatalog" aria-labelledby="articulos-titulo" class="pb-16 md:pb-20">
+        <div class="mb-6 flex flex-wrap items-end justify-between gap-3">
+          <h2 id="articulos-titulo" itemprop="name" class="text-2xl font-semibold">Todos los artículos</h2>
+          <p class="text-sm text-text-secondary">20 artículos de demostración</p>
+        </div>
+
+        <div class="grid min-w-0 grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 md:gap-x-6 xl:grid-cols-4 xl:gap-x-8">
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Zapatillas%20de%20lona" alt="Placeholder de producto: zapatillas de lona" width="600" height="750" loading="eager" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Calzado</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Zapatillas de lona</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="59.00" class="text-base">59,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Botines%20de%20piel" alt="Placeholder de producto: botines de piel" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Calzado</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Botines de piel</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="129.00" class="text-base">129,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Sandalias%20de%20cuero" alt="Placeholder de producto: sandalias de cuero" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Calzado</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Sandalias de cuero</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="79.00" class="text-base">79,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Mocasines%20clasicos" alt="Placeholder de producto: mocasines clásicos" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Calzado</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Mocasines clásicos</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="99.00" class="text-base">99,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Zapatillas%20deportivas" alt="Placeholder de producto: zapatillas deportivas" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Calzado</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Zapatillas deportivas</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="89.00" class="text-base">89,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Camisa%20Oxford" alt="Placeholder de producto: camisa Oxford" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Camisas</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Camisa Oxford</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="69.00" class="text-base">69,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Camisa%20de%20lino" alt="Placeholder de producto: camisa de lino" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Camisas</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Camisa de lino</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="75.00" class="text-base">75,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Camisa%20de%20rayas" alt="Placeholder de producto: camisa de rayas" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Camisas</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Camisa de rayas</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="72.00" class="text-base">72,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Blusa%20de%20popelina" alt="Placeholder de producto: blusa de popelina" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Camisas</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Blusa de popelina</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="68.00" class="text-base">68,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Camisa%20vaquera" alt="Placeholder de producto: camisa vaquera" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Camisas</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Camisa vaquera</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="79.00" class="text-base">79,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Vaqueros%20rectos" alt="Placeholder de producto: vaqueros rectos" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Pantalones</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Vaqueros rectos</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="89.00" class="text-base">89,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Pantalon%20chino" alt="Placeholder de producto: pantalón chino" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Pantalones</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Pantalón chino</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="85.00" class="text-base">85,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Pantalon%20de%20lino" alt="Placeholder de producto: pantalón de lino" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Pantalones</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Pantalón de lino</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="79.00" class="text-base">79,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Pantalon%20de%20pernera%20ancha" alt="Placeholder de producto: pantalón de pernera ancha" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Pantalones</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Pantalón de pernera ancha</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="92.00" class="text-base">92,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Bermuda%20de%20algodon" alt="Placeholder de producto: bermuda de algodón" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Pantalones</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Bermuda de algodón</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="65.00" class="text-base">65,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Bolso%20bandolera" alt="Placeholder de producto: bolso bandolera" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Accesorios</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Bolso bandolera</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="110.00" class="text-base">110,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Cinturon%20de%20cuero" alt="Placeholder de producto: cinturón de cuero" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Accesorios</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Cinturón de cuero</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="45.00" class="text-base">45,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Bufanda%20de%20lana" alt="Placeholder de producto: bufanda de lana" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Accesorios</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Bufanda de lana</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="59.00" class="text-base">59,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Gorra%20de%20algodon" alt="Placeholder de producto: gorra de algodón" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Accesorios</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Gorra de algodón</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="35.00" class="text-base">35,00 €</data>
+              </div>
+            </div>
+          </article>
+
+          <article itemscope itemtype="https://schema.org/CatalogItem" class="min-w-0">
+            <link itemprop="catalog" href="#catalogo-lista">
+            <div itemprop="item" itemscope itemtype="https://schema.org/Product">
+              <img itemprop="image" src="https://placehold.co/600x750/EDF2EE/17483F?text=Cartera%20de%20cuero" alt="Placeholder de producto: cartera de cuero" width="600" height="750" loading="lazy" decoding="async" class="aspect-[4/5] w-full rounded-sm border border-border object-cover">
+              <p itemprop="category" class="mt-4 text-xs font-medium text-text-secondary">Accesorios</p>
+              <h3 itemprop="name" class="mt-1 text-base font-semibold">Cartera de cuero</h3>
+              <div itemprop="offers" itemscope itemtype="https://schema.org/Offer" class="mt-2">
+                <meta itemprop="priceCurrency" content="EUR">
+                <data itemprop="price" value="55.00" class="text-base">55,00 €</data>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-brand-pine text-white">
+      <div class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 md:grid-cols-3 md:px-6 md:py-16 xl:px-8">
+        <section aria-labelledby="categorias-titulo" class="min-w-0">
+          <h2 id="categorias-titulo" class="mb-4 text-sm font-semibold">Categorías</h2>
+          <ul class="text-sm">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Calzado<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Camisas<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Pantalones<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Accesorios<span class="sr-only"> (destino pendiente)</span></span></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="legal-titulo" class="min-w-0">
+          <h2 id="legal-titulo" class="mb-4 text-sm font-semibold">Legal</h2>
+          <ul class="text-sm">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Términos y condiciones<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Política de privacidad<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Sobre la marca<span class="sr-only"> (destino pendiente)</span></span></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="contacto-titulo" class="min-w-0">
+          <h2 id="contacto-titulo" class="mb-4 text-sm font-semibold">Contacto</h2>
+          <p class="text-sm leading-relaxed">Información de contacto pendiente.</p>
+          <p class="mt-4 text-sm leading-relaxed">Destinos de navegación pendientes de confirmar.</p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

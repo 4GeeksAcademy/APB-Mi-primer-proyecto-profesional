@@ -1,0 +1,57 @@
+:root {
+  color-scheme: light;
+  --brand-pine: #17483f;
+  --brand-coral: #b64d3c;
+  --brand-ochre: #d7a13b;
+  --page: #f7f8f4;
+  --surface: #ffffff;
+  --surface-subtle: #edf2ee;
+  --text-primary: #202522;
+  --text-secondary: #66716b;
+  --border: #d7ded8;
+  --disabled-text: #646d67;
+  --success: #286749;
+  --success-bg: #eaf4ee;
+  --warning: #795300;
+  --warning-bg: #fff3d8;
+  --error: #a33131;
+  --error-bg: #fcebec;
+  --info: #205a75;
+  --info-bg: #eaf3f8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-primary);
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-weight: 400;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-coral);
+  outline-offset: 2px;
+}
+
+footer :focus-visible {
+  outline-color: var(--brand-ochre);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

@@ -1,6 +1,7 @@
 {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "css.customData": [".vscode/tailwind.css-data.json"],
     "workbench.editorAssociations": {   
         "*.md": "vscode.markdown.preview.editor"
     }

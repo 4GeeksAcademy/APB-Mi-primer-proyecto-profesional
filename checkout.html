@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Tienda de ropa</title>
+    <meta name="description" content="Completa los datos de demostración para el checkout de la tienda.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap">
+    <style type="text/tailwindcss">
+      @theme {
+        --color-brand-pine: #17483F;
+        --color-brand-coral: #B64D3C;
+        --color-brand-ochre: #D7A13B;
+        --color-page: #F7F8F4;
+        --color-surface: #FFFFFF;
+        --color-surface-subtle: #EDF2EE;
+        --color-text-primary: #202522;
+        --color-text-secondary: #66716B;
+        --color-border: #D7DED8;
+        --color-disabled-text: #646D67;
+        --font-sans: "DM Sans", "Helvetica Neue", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="flex min-h-dvh flex-col bg-page font-sans text-base leading-normal text-text-primary">
+    <a href="#contenido" class="sr-only z-10 rounded-sm bg-surface px-4 py-3 text-brand-pine underline focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Saltar al contenido</a>
+
+    <header class="border-b border-border bg-surface">
+      <div class="mx-auto flex min-h-16 w-full max-w-7xl flex-wrap items-center gap-x-8 gap-y-4 px-4 py-4 md:min-h-18 md:px-6 xl:px-8">
+        <span class="min-w-0 text-xl font-semibold break-words">Marca pendiente</span>
+
+        <nav aria-label="Navegación principal" class="min-w-0 md:ml-auto">
+          <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-text-secondary">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Inicio<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Catálogo<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><a href="carrito.html" class="inline-flex min-h-11 items-center text-brand-pine hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Carrito</a></li>
+            <li><span aria-current="page" class="inline-flex min-h-11 items-center border-b-2 border-brand-pine text-brand-pine">Checkout</span></li>
+          </ul>
+        </nav>
+
+        <div class="flex w-full min-w-0 flex-wrap items-start gap-4 lg:w-auto lg:flex-1">
+          <div class="min-w-0 flex-1 basis-48">
+            <label for="busqueda" class="mb-1 block text-sm font-medium">Buscar productos</label>
+            <input id="busqueda" type="search" placeholder="Búsqueda de demostración" disabled aria-describedby="busqueda-estado" class="min-h-12 w-full min-w-0 cursor-not-allowed rounded-sm border border-border bg-surface-subtle px-3 text-base text-disabled-text placeholder:text-disabled-text">
+            <p id="busqueda-estado" class="mt-1 text-xs text-text-secondary">No disponible en este prototipo.</p>
+          </div>
+
+          <details class="min-w-0 max-w-full basis-40 pt-6 text-sm">
+            <summary class="min-h-11 cursor-pointer rounded-sm px-2 py-3 font-medium text-brand-pine hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Cuenta</summary>
+            <p class="max-w-56 px-2 py-3 text-text-secondary">Demostración. El acceso a cuenta no está disponible.</p>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido" tabindex="-1" class="mx-auto w-full max-w-7xl flex-1 px-4 py-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-coral md:px-6 md:py-14 xl:px-8">
+      <div class="mb-8 flex flex-wrap items-end justify-between gap-4 border-b border-border pb-6 md:mb-10">
+        <div>
+          <p class="mb-2 text-sm font-medium text-text-secondary">Paso final · Pago de demostración</p>
+          <h1 class="text-3xl leading-tight font-semibold md:text-4xl">Checkout</h1>
+        </div>
+        <a href="carrito.html" class="inline-flex min-h-11 items-center text-sm font-medium text-brand-pine underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Volver al carrito</a>
+      </div>
+
+      <ol aria-label="Pasos de compra" class="mb-10 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
+        <li class="flex min-h-14 items-center gap-3 border-b-2 border-brand-pine pb-3 text-sm font-medium">
+          <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-pine text-sm text-white">1</span>
+          <span>Datos personales</span>
+        </li>
+        <li class="flex min-h-14 items-center gap-3 border-b-2 border-brand-pine pb-3 text-sm font-medium">
+          <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-pine text-sm text-white">2</span>
+          <span>Dirección de entrega</span>
+        </li>
+        <li aria-current="step" class="flex min-h-14 items-center gap-3 border-b-2 border-brand-coral pb-3 text-sm font-semibold">
+          <span class="flex size-8 shrink-0 items-center justify-center rounded-full bg-brand-coral text-sm text-white">3</span>
+          <span>Pago con tarjeta</span>
+        </li>
+      </ol>
+
+      <div class="grid min-w-0 gap-10 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-12">
+        <form autocomplete="on" class="min-w-0 space-y-10">
+          <fieldset class="min-w-0 border-b border-border pb-8">
+            <legend class="mb-5 text-xl font-semibold">1. Datos personales</legend>
+            <div class="grid min-w-0 gap-5 sm:grid-cols-2">
+              <div class="min-w-0">
+                <label for="nombre" class="mb-2 block text-sm font-medium">Nombre</label>
+                <input id="nombre" type="text" autocomplete="given-name" required class="min-h-12 w-full min-w-0 rounded-sm border border-border bg-surface px-3 text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-pine">
+              </div>
+              <div class="min-w-0">
+                <label for="apellidos" class="mb-2 block text-sm font-medium">Apellidos</label>
+                <input id="apellidos" type="text" autocomplete="family-name" required class="min-h-12 w-full min-w-0 rounded-sm border border-border bg-surface px-3 text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-pine">
+              </div>
+              <div class="min-w-0">
+                <label for="correo" class="mb-2 block text-sm font-medium">Correo electrónico</label>
+                <input id="correo" type="email" autocomplete="email" required class="min-h-12 w-full min-w-0 rounded-sm border border-border bg-surface px-3 text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-pine">
+              </div>
+              <div class="min-w-0">
+                <label for="telefono" class="mb-2 block text-sm font-medium">Teléfono <span class="font-normal text-text-secondary">(opcional)</span></label>
+                <input id="telefono" type="tel" autocomplete="tel" class="min-h-12 w-full min-w-0 rounded-sm border border-border bg-surface px-3 text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-pine">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="min-w-0 border-b border-border pb-8">
+            <legend class="mb-5 text-xl font-semibold">2. Dirección de entrega</legend>
+            <div class="grid min-w-0 gap-5 sm:grid-cols-2">
+              <div class="min-w-0 sm:col-span-2">
+                <label for="direccion" class="mb-2 block text-sm font-medium">Dirección y número</label>
+                <input id="direccion" type="text" autocomplete="street-address" required class="min-h-12 w-full min-w-0 rounded-sm border border-border bg-surface px-3 text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-pine">
+              </div>
+              <div class="min-w-0">
+                <label for="codigo-postal" class="mb-2 block text-sm font-medium">Código postal</label>
+                <input id="codigo-postal" type="text" autocomplete="postal-code" required class="min-h-12 w-full min-w-0 rounded-sm border border-border bg-surface px-3 text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-pine">
+              </div>
+              <div class="min-w-0">
+                <label for="ciudad" class="mb-2 block text-sm font-medium">Ciudad</label>
+                <input id="ciudad" type="text" autocomplete="address-level2" required class="min-h-12 w-full min-w-0 rounded-sm border border-border bg-surface px-3 text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-pine">
+              </div>
+              <div class="min-w-0 sm:col-span-2">
+                <label for="pais" class="mb-2 block text-sm font-medium">País</label>
+                <select id="pais" autocomplete="country-name" required class="min-h-12 w-full min-w-0 rounded-sm border border-border bg-surface px-3 text-base focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-pine">
+                  <option value="" disabled>Selecciona un país</option>
+                  <option value="FR" selected>Francia</option>
+                  <option value="ES">España</option>
+                  <option value="PT">Portugal</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="min-w-0">
+            <legend class="mb-2 text-xl font-semibold">3. Pago con tarjeta</legend>
+            <p id="aviso-pago" class="mb-5 border-l-4 border-brand-ochre bg-surface-subtle p-4 text-sm leading-relaxed">Demostración: no introduzcas datos reales de tarjeta. Estos campos están deshabilitados y no se envía ni almacena información.</p>
+            <div class="grid min-w-0 gap-5 sm:grid-cols-2">
+              <div class="min-w-0 sm:col-span-2">
+                <label for="titular" class="mb-2 block text-sm font-medium">Titular de la tarjeta</label>
+                <input id="titular" type="text" autocomplete="off" disabled aria-describedby="aviso-pago" placeholder="No disponible en la demostración" class="min-h-12 w-full min-w-0 cursor-not-allowed rounded-sm border border-border bg-surface-subtle px-3 text-base text-disabled-text placeholder:text-disabled-text">
+              </div>
+              <div class="min-w-0 sm:col-span-2">
+                <label for="numero-tarjeta" class="mb-2 block text-sm font-medium">Número de tarjeta</label>
+                <input id="numero-tarjeta" type="text" inputmode="numeric" autocomplete="off" disabled aria-describedby="aviso-pago" placeholder="No disponible en la demostración" class="min-h-12 w-full min-w-0 cursor-not-allowed rounded-sm border border-border bg-surface-subtle px-3 text-base text-disabled-text placeholder:text-disabled-text">
+              </div>
+              <div class="min-w-0">
+                <label for="caducidad" class="mb-2 block text-sm font-medium">Fecha de caducidad</label>
+                <input id="caducidad" type="text" autocomplete="off" disabled aria-describedby="aviso-pago" placeholder="MM/AA" class="min-h-12 w-full min-w-0 cursor-not-allowed rounded-sm border border-border bg-surface-subtle px-3 text-base text-disabled-text placeholder:text-disabled-text">
+              </div>
+              <div class="min-w-0">
+                <label for="codigo-seguridad" class="mb-2 block text-sm font-medium">Código de seguridad</label>
+                <input id="codigo-seguridad" type="text" autocomplete="off" disabled aria-describedby="aviso-pago" placeholder="No disponible" class="min-h-12 w-full min-w-0 cursor-not-allowed rounded-sm border border-border bg-surface-subtle px-3 text-base text-disabled-text placeholder:text-disabled-text">
+              </div>
+            </div>
+            <button type="submit" disabled class="mt-7 inline-flex min-h-12 w-full items-center justify-center rounded-sm bg-surface-subtle px-5 py-3 text-sm font-semibold text-disabled-text disabled:cursor-not-allowed sm:w-auto sm:min-w-56">Confirmar compra</button>
+            <p class="mt-3 text-sm text-text-secondary">La confirmación está deshabilitada; este prototipo no procesa pagos ni pedidos.</p>
+          </fieldset>
+        </form>
+
+        <aside aria-labelledby="resumen-titulo" class="min-w-0 rounded-sm border border-border bg-surface p-5 md:p-6 lg:sticky lg:top-6">
+          <h2 id="resumen-titulo" class="text-xl font-semibold">Resumen del pedido</h2>
+          <ul class="mt-5 space-y-4 border-b border-border pb-5 text-sm">
+            <li class="flex items-start justify-between gap-4">
+              <span class="min-w-0">Camisa de lino <span class="text-text-secondary">× 1</span></span>
+              <span class="shrink-0">€65,00</span>
+            </li>
+            <li class="flex items-start justify-between gap-4">
+              <span class="min-w-0">Camiseta de algodón <span class="text-text-secondary">× 1</span></span>
+              <span class="shrink-0">€28,00</span>
+            </li>
+            <li class="flex items-start justify-between gap-4">
+              <span class="min-w-0">Bolso de lona <span class="text-text-secondary">× 2</span></span>
+              <span class="shrink-0">€68,00</span>
+            </li>
+          </ul>
+          <dl class="mt-5 space-y-4 text-sm">
+            <div class="flex items-center justify-between gap-4">
+              <dt class="text-text-secondary">Subtotal</dt>
+              <dd>€161,00</dd>
+            </div>
+            <div class="flex items-start justify-between gap-4">
+              <dt class="text-text-secondary">Impuestos <span class="block text-xs">(ejemplo 20%)</span></dt>
+              <dd>€32,20</dd>
+            </div>
+            <div class="flex items-center justify-between gap-4 border-t border-border pt-4 text-base font-semibold">
+              <dt>Total</dt>
+              <dd>€193,20</dd>
+            </div>
+          </dl>
+          <p class="mt-5 text-xs leading-relaxed text-text-secondary">Importes e impuesto ilustrativos; el 20% no representa un tratamiento fiscal real.</p>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="bg-brand-pine text-white">
+      <div class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 md:grid-cols-3 md:px-6 md:py-16 xl:px-8">
+        <section aria-labelledby="categorias-titulo" class="min-w-0">
+          <h2 id="categorias-titulo" class="mb-4 text-sm font-semibold">Categorías</h2>
+          <ul class="text-sm">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Calzado<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Camisas<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Pantalones<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Accesorios<span class="sr-only"> (destino pendiente)</span></span></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="legal-titulo" class="min-w-0">
+          <h2 id="legal-titulo" class="mb-4 text-sm font-semibold">Legal</h2>
+          <ul class="text-sm">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Términos y condiciones<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Política de privacidad<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Sobre la marca<span class="sr-only"> (destino pendiente)</span></span></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="contacto-titulo" class="min-w-0">
+          <h2 id="contacto-titulo" class="mb-4 text-sm font-semibold">Contacto</h2>
+          <p class="text-sm leading-relaxed">Información de contacto pendiente.</p>
+          <p class="mt-4 text-sm leading-relaxed">Destinos de navegación pendientes de confirmar.</p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

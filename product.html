@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ficha de producto ficticia para el prototipo de tienda: camisa recta de algodón.">
+    <title>Camisa recta de algodón | Tienda de demostración</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="min-h-screen bg-[var(--page)] text-[var(--text-primary)] antialiased">
+    <a class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-[var(--surface)] focus:px-4 focus:py-3" href="#contenido">Saltar al contenido</a>
+    <header class="border-b border-[var(--border)] bg-[var(--surface)]">
+      <div class="mx-auto grid max-w-7xl grid-cols-[auto_minmax(0,1fr)] items-center gap-x-4 gap-y-3 px-4 py-3 md:h-[72px] md:grid-cols-[auto_minmax(14rem,1fr)_auto] md:gap-x-8 md:px-6 md:py-0 xl:px-8">
+        <a class="min-h-11 self-center text-lg font-semibold text-[var(--brand-pine)] no-underline" href="index.html" aria-label="Tienda de demostración, inicio">TIENDA</a>
+        <form class="flex min-w-0" action="catalog.html" method="get" role="search">
+          <label class="sr-only" for="busqueda">Buscar productos</label>
+          <input class="min-h-12 min-w-0 flex-1 rounded-l border border-r-0 border-[var(--border)] bg-[var(--surface)] px-3 text-base placeholder:text-[var(--text-secondary)] hover:border-[var(--text-secondary)] focus:border-[var(--brand-pine)]" id="busqueda" name="q" type="search" placeholder="Buscar productos">
+          <button class="min-h-12 rounded-r bg-[var(--brand-pine)] px-4 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#103b33] active:bg-[#0d302a]" type="submit">Buscar</button>
+        </form>
+        <nav class="col-span-2 flex min-h-11 items-center justify-end gap-2 md:col-span-1" aria-label="Accesos de cuenta y carrito">
+          <a class="inline-flex min-h-11 items-center px-3 text-sm font-medium text-[var(--text-primary)] underline-offset-4 hover:underline" href="account.html" aria-label="Cuenta, ruta preparada para otra vista" title="Ruta preparada; vista fuera del alcance de esta entrega">Cuenta</a>
+          <a class="inline-flex min-h-11 items-center rounded border border-[var(--brand-pine)] px-3 text-sm font-semibold text-[var(--brand-pine)] transition-colors duration-150 hover:bg-[var(--surface-subtle)]" href="cart.html" aria-label="Carrito, ruta preparada para otra vista" title="Ruta preparada; vista fuera del alcance de esta entrega">Carrito</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-12 xl:px-8 xl:py-16">
+      <nav class="mb-6 text-sm text-[var(--text-secondary)]" aria-label="Ruta de navegación">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li><a class="min-h-11 inline-flex items-center text-[var(--brand-pine)] underline-offset-4 hover:underline" href="index.html">Inicio</a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page">Producto de demostración</li>
+        </ol>
+      </nav>
+
+      <section id="producto" aria-labelledby="nombre-producto">
+        <div class="grid items-start gap-8 md:grid-cols-2 md:gap-10 lg:gap-16">
+          <figure class="m-0 min-w-0">
+            <img class="aspect-[4/5] w-full object-cover" src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=1200&h=1500&q=80" width="1200" height="1500" alt="Camisas claras de demostración con cuello clásico colgadas en perchas" fetchpriority="high">
+            <figcaption class="mt-2 text-xs text-[var(--text-secondary)]">Imagen de demostración · fotografía de Unsplash</figcaption>
+          </figure>
+
+          <div class="min-w-0 md:pt-4">
+            <p class="mb-3 text-xs font-semibold uppercase text-[var(--brand-pine)]">Producto de demostración · datos ficticios</p>
+            <h1 class="text-[32px] leading-[1.15] md:text-5xl" id="nombre-producto">Camisa recta de algodón</h1>
+            <p class="mt-3 text-sm text-[var(--text-secondary)]">Referencia DEMO-CAM-01</p>
+            <p class="mt-5 text-xl font-semibold">68,00 €</p>
+            <p class="mt-2 text-sm text-[var(--text-secondary)]">Precio ficticio para mostrar la ficha; no es una oferta comercial.</p>
+
+            <form class="mt-8 max-w-md" action="cart.html" method="get">
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label class="mb-2 block text-sm font-semibold" for="talla">Talla <span class="font-normal text-[var(--text-secondary)]">(demostración)</span></label>
+                  <select class="min-h-12 w-full rounded border border-[var(--border)] bg-[var(--surface)] px-3 text-base hover:border-[var(--text-secondary)] focus:border-[var(--brand-pine)]" id="talla" name="talla">
+                    <option value="">Selecciona una talla</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="mb-2 block text-sm font-semibold" for="cantidad">Cantidad</label>
+                  <input class="min-h-12 w-full rounded border border-[var(--border)] bg-[var(--surface)] px-3 text-base hover:border-[var(--text-secondary)] focus:border-[var(--brand-pine)]" id="cantidad" name="cantidad" type="number" min="1" value="1">
+                </div>
+              </div>
+              <button class="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded bg-[var(--brand-pine)] px-5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#103b33] active:bg-[#0d302a]" type="submit">Agregar al carrito</button>
+              <p class="mt-3 text-xs leading-5 text-[var(--text-secondary)]">Acción de navegación de demostración: no se almacena ni procesa ningún pedido.</p>
+            </form>
+          </div>
+        </div>
+
+        <div class="mt-12 grid gap-8 border-t border-[var(--border)] pt-8 md:mt-16 md:grid-cols-3 md:gap-10 md:pt-10">
+          <section class="md:col-span-1" aria-labelledby="titulo-descripcion">
+            <h2 class="text-[22px] leading-tight" id="titulo-descripcion">Descripción</h2>
+            <p class="mt-3 text-base leading-6 text-[var(--text-secondary)]">Camisa de corte recto con cuello clásico y cierre frontal de botones. El tejido ligero y la silueta sencilla forman parte de esta ficha de producto ficticia.</p>
+          </section>
+          <section aria-labelledby="titulo-materiales">
+            <h2 class="text-[22px] leading-tight" id="titulo-materiales">Materiales</h2>
+            <p class="mt-3 text-base leading-6 text-[var(--text-secondary)]">100 % algodón de demostración. La composición indicada es un dato inventado para el prototipo y no corresponde a una prenda real.</p>
+          </section>
+          <section aria-labelledby="titulo-uso">
+            <h2 class="text-[22px] leading-tight" id="titulo-uso">Uso recomendado</h2>
+            <p class="mt-3 text-base leading-6 text-[var(--text-secondary)]">Ejemplo de uso para el prototipo: jornada cotidiana, oficina informal o viaje. No es una recomendación comercial sobre un producto real.</p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[var(--brand-pine)] text-white">
+      <div class="mx-auto max-w-7xl px-4 py-12 md:px-6 md:py-16 xl:px-8">
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <h2 class="font-sans text-sm font-semibold">Categorías</h2>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li><a class="inline-flex min-h-11 items-center underline-offset-4 hover:underline" href="catalog.html?category=calzado" title="Ruta preparada para la vista de catálogo">Calzado</a></li>
+              <li><a class="inline-flex min-h-11 items-center underline-offset-4 hover:underline" href="catalog.html?category=camisas" title="Ruta preparada para la vista de catálogo">Camisas</a></li>
+              <li><a class="inline-flex min-h-11 items-center underline-offset-4 hover:underline" href="catalog.html?category=pantalones" title="Ruta preparada para la vista de catálogo">Pantalones</a></li>
+              <li><a class="inline-flex min-h-11 items-center underline-offset-4 hover:underline" href="catalog.html?category=accesorios" title="Ruta preparada para la vista de catálogo">Accesorios</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="font-sans text-sm font-semibold">Legal</h2>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li><a class="inline-flex min-h-11 items-center underline-offset-4 hover:underline" href="terms.html" title="Ruta preparada; página fuera del alcance de esta entrega">Términos y condiciones</a></li>
+              <li><a class="inline-flex min-h-11 items-center underline-offset-4 hover:underline" href="privacy.html" title="Ruta preparada; página fuera del alcance de esta entrega">Política de privacidad</a></li>
+              <li><a class="inline-flex min-h-11 items-center underline-offset-4 hover:underline" href="index.html#marca">Sobre la tienda</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="font-sans text-sm font-semibold">Contacto</h2>
+            <p class="mt-3 text-sm leading-6 text-white/85">Datos de contacto no definidos en este prototipo.</p>
+          </div>
+          <div>
+            <p class="text-sm font-semibold">TIENDA</p>
+            <p class="mt-3 text-sm leading-6 text-white/85">Prototipo visual · información ficticia de demostración.</p>
+          </div>
+        </div>
+        <p class="mt-10 border-t border-white/25 pt-5 text-xs text-white/85">Los productos, referencias, precios e imágenes de esta página son demostrativos y no representan una oferta real.</p>
+      </div>
+    </footer>
+  </body>
+</html>

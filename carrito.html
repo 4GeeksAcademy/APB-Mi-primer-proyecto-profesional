@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | Tienda de ropa</title>
+    <meta name="description" content="Revisa los productos de ejemplo y el total de demostración de tu carrito.">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap">
+    <style type="text/tailwindcss">
+      @theme {
+        --color-brand-pine: #17483F;
+        --color-brand-coral: #B64D3C;
+        --color-brand-ochre: #D7A13B;
+        --color-page: #F7F8F4;
+        --color-surface: #FFFFFF;
+        --color-surface-subtle: #EDF2EE;
+        --color-text-primary: #202522;
+        --color-text-secondary: #66716B;
+        --color-border: #D7DED8;
+        --color-disabled-text: #646D67;
+        --font-sans: "DM Sans", "Helvetica Neue", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="flex min-h-dvh flex-col bg-page font-sans text-base leading-normal text-text-primary">
+    <a href="#contenido" class="sr-only z-10 rounded-sm bg-surface px-4 py-3 text-brand-pine underline focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Saltar al contenido</a>
+
+    <header class="border-b border-border bg-surface">
+      <div class="mx-auto flex min-h-16 w-full max-w-7xl flex-wrap items-center gap-x-8 gap-y-4 px-4 py-4 md:min-h-18 md:px-6 xl:px-8">
+        <span class="min-w-0 text-xl font-semibold break-words">Marca pendiente</span>
+
+        <nav aria-label="Navegación principal" class="min-w-0 md:ml-auto">
+          <ul class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm font-medium text-text-secondary">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Inicio<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Catálogo<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span aria-current="page" class="inline-flex min-h-11 items-center border-b-2 border-brand-pine text-brand-pine">Carrito</span></li>
+          </ul>
+        </nav>
+
+        <div class="flex w-full min-w-0 flex-wrap items-start gap-4 lg:w-auto lg:flex-1">
+          <div class="min-w-0 flex-1 basis-48">
+            <label for="busqueda" class="mb-1 block text-sm font-medium">Buscar productos</label>
+            <input id="busqueda" type="search" placeholder="Búsqueda de demostración" disabled aria-describedby="busqueda-estado" class="min-h-12 w-full min-w-0 cursor-not-allowed rounded-sm border border-border bg-surface-subtle px-3 text-base text-disabled-text placeholder:text-disabled-text">
+            <p id="busqueda-estado" class="mt-1 text-xs text-text-secondary">No disponible en este prototipo.</p>
+          </div>
+
+          <details class="min-w-0 max-w-full basis-40 pt-6 text-sm">
+            <summary class="min-h-11 cursor-pointer rounded-sm px-2 py-3 font-medium text-brand-pine hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Cuenta</summary>
+            <p class="max-w-56 px-2 py-3 text-text-secondary">Demostración. El acceso a cuenta no está disponible.</p>
+          </details>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido" tabindex="-1" class="mx-auto w-full max-w-7xl flex-1 px-4 py-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-brand-coral md:px-6 md:py-14 xl:px-8">
+      <div class="mb-8 border-b border-border pb-6 md:mb-10">
+        <p class="mb-2 text-sm font-medium text-text-secondary">Tu selección · 3 productos</p>
+        <h1 class="text-3xl leading-tight font-semibold md:text-4xl">Carrito</h1>
+      </div>
+
+      <div class="grid min-w-0 gap-10 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-12">
+        <section aria-labelledby="productos-titulo" class="min-w-0">
+          <h2 id="productos-titulo" class="sr-only">Productos del carrito</h2>
+          <div class="hidden grid-cols-[minmax(0,2fr)_minmax(6rem,0.8fr)_minmax(5rem,0.6fr)_minmax(6rem,0.8fr)] gap-4 border-b border-border pb-3 text-xs font-semibold text-text-secondary md:grid">
+            <span>Producto</span>
+            <span>Precio unitario</span>
+            <span>Cantidad</span>
+            <span class="text-right">Total</span>
+          </div>
+
+          <article class="grid min-w-0 grid-cols-[5rem_minmax(0,1fr)] gap-x-4 gap-y-4 border-b border-border py-5 md:grid-cols-[minmax(0,2fr)_minmax(6rem,0.8fr)_minmax(5rem,0.6fr)_minmax(6rem,0.8fr)] md:items-center md:gap-4 md:py-6">
+            <div class="flex min-w-0 gap-4 md:col-start-1">
+              <img src="https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&amp;fit=crop&amp;w=240&amp;h=300&amp;q=80" alt="Camisa de lino en tono claro" width="80" height="100" class="aspect-[4/5] w-20 shrink-0 rounded-sm object-cover" loading="lazy">
+              <div class="min-w-0 self-center">
+                <h3 class="font-semibold">Camisa de lino</h3>
+                <p class="mt-1 text-sm text-text-secondary">Ref. CAM-014 · Talla M</p>
+              </div>
+            </div>
+            <p class="col-start-2 text-sm md:col-start-2"><span class="text-text-secondary md:hidden">Precio unitario: </span>€65,00</p>
+            <p class="col-start-2 text-sm md:col-start-3"><span class="text-text-secondary md:hidden">Cantidad: </span>1</p>
+            <p class="col-start-2 text-right font-semibold md:col-start-4">€65,00</p>
+          </article>
+
+          <article class="grid min-w-0 grid-cols-[5rem_minmax(0,1fr)] gap-x-4 gap-y-4 border-b border-border py-5 md:grid-cols-[minmax(0,2fr)_minmax(6rem,0.8fr)_minmax(5rem,0.6fr)_minmax(6rem,0.8fr)] md:items-center md:gap-4 md:py-6">
+            <div class="flex min-w-0 gap-4 md:col-start-1">
+              <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&amp;fit=crop&amp;w=240&amp;h=300&amp;q=80" alt="Camiseta de algodón en tono claro" width="80" height="100" class="aspect-[4/5] w-20 shrink-0 rounded-sm object-cover" loading="lazy">
+              <div class="min-w-0 self-center">
+                <h3 class="font-semibold">Camiseta de algodón</h3>
+                <p class="mt-1 text-sm text-text-secondary">Ref. CAM-008 · Talla S</p>
+              </div>
+            </div>
+            <p class="col-start-2 text-sm md:col-start-2"><span class="text-text-secondary md:hidden">Precio unitario: </span>€28,00</p>
+            <p class="col-start-2 text-sm md:col-start-3"><span class="text-text-secondary md:hidden">Cantidad: </span>1</p>
+            <p class="col-start-2 text-right font-semibold md:col-start-4">€28,00</p>
+          </article>
+
+          <article class="grid min-w-0 grid-cols-[5rem_minmax(0,1fr)] gap-x-4 gap-y-4 border-b border-border py-5 md:grid-cols-[minmax(0,2fr)_minmax(6rem,0.8fr)_minmax(5rem,0.6fr)_minmax(6rem,0.8fr)] md:items-center md:gap-4 md:py-6">
+            <div class="flex min-w-0 gap-4 md:col-start-1">
+              <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&amp;fit=crop&amp;w=240&amp;h=300&amp;q=80" alt="Bolso de lona en tono neutro" width="80" height="100" class="aspect-[4/5] w-20 shrink-0 rounded-sm object-cover" loading="lazy">
+              <div class="min-w-0 self-center">
+                <h3 class="font-semibold">Bolso de lona</h3>
+                <p class="mt-1 text-sm text-text-secondary">Ref. ACC-021 · Talla única</p>
+              </div>
+            </div>
+            <p class="col-start-2 text-sm md:col-start-2"><span class="text-text-secondary md:hidden">Precio unitario: </span>€34,00</p>
+            <p class="col-start-2 text-sm md:col-start-3"><span class="text-text-secondary md:hidden">Cantidad: </span>2</p>
+            <p class="col-start-2 text-right font-semibold md:col-start-4">€68,00</p>
+          </article>
+        </section>
+
+        <aside aria-labelledby="resumen-titulo" class="min-w-0 rounded-sm border border-border bg-surface p-5 md:p-6">
+          <h2 id="resumen-titulo" class="text-xl font-semibold">Resumen del pedido</h2>
+          <dl class="mt-6 space-y-4 text-sm">
+            <div class="flex items-center justify-between gap-4">
+              <dt class="text-text-secondary">Subtotal</dt>
+              <dd>€161,00</dd>
+            </div>
+            <div class="flex items-start justify-between gap-4">
+              <dt class="text-text-secondary">Impuestos <span class="block text-xs">(ejemplo 20%)</span></dt>
+              <dd>€32,20</dd>
+            </div>
+            <div class="flex items-center justify-between gap-4 border-t border-border pt-4 text-base font-semibold">
+              <dt>Total</dt>
+              <dd>€193,20</dd>
+            </div>
+          </dl>
+          <p class="mt-5 text-xs leading-relaxed text-text-secondary">Importes e impuesto ilustrativos; el 20% no representa un tratamiento fiscal real.</p>
+          <a href="checkout.html" class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-sm bg-brand-pine px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#103b34] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-coral">Comprar</a>
+          <p class="mt-3 text-center text-xs leading-relaxed text-text-secondary">Compra de demostración. No se procesa ningún pedido ni pago.</p>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="bg-brand-pine text-white">
+      <div class="mx-auto grid w-full max-w-7xl gap-8 px-4 py-12 md:grid-cols-3 md:px-6 md:py-16 xl:px-8">
+        <section aria-labelledby="categorias-titulo" class="min-w-0">
+          <h2 id="categorias-titulo" class="mb-4 text-sm font-semibold">Categorías</h2>
+          <ul class="text-sm">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Calzado<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Camisas<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Pantalones<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Accesorios<span class="sr-only"> (destino pendiente)</span></span></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="legal-titulo" class="min-w-0">
+          <h2 id="legal-titulo" class="mb-4 text-sm font-semibold">Legal</h2>
+          <ul class="text-sm">
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Términos y condiciones<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Política de privacidad<span class="sr-only"> (destino pendiente)</span></span></li>
+            <li><span class="inline-flex min-h-11 items-center" title="Destino pendiente">Sobre la marca<span class="sr-only"> (destino pendiente)</span></span></li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="contacto-titulo" class="min-w-0">
+          <h2 id="contacto-titulo" class="mb-4 text-sm font-semibold">Contacto</h2>
+          <p class="text-sm leading-relaxed">Información de contacto pendiente.</p>
+          <p class="mt-4 text-sm leading-relaxed">Destinos de navegación pendientes de confirmar.</p>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>
